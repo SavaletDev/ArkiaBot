@@ -2,7 +2,7 @@ const { MessageEmbed } = require("discord.js");
 const { play } = require("../include/play");
 const YouTubeAPI = require("simple-youtube-api");
 const scdl = require("soundcloud-downloader").default;
-const { YOUTUBE_API_KEY, SOUNDCLOUD_CLIENT_ID, MAX_PLAYLIST_SIZE, DEFAULT_VOLUME } = require("../util/EvobotUtil");
+const { YOUTUBE_API_KEY, SOUNDCLOUD_CLIENT_ID, MAX_PLAYLIST_SIZE, DEFAULT_VOLUME } = require("../util/utilmusic");
 const youtube = new YouTubeAPI(YOUTUBE_API_KEY);
 
 module.exports = {
@@ -87,18 +87,24 @@ module.exports = {
     serverQueue ? serverQueue.songs.push(...newSongs) : queueConstruct.songs.push(...newSongs);
     const songs = serverQueue ? serverQueue.songs : queueConstruct.songs;
 
-    let playlistEmbed = new MessageEmbed()
+    // EMBED BROKE //
+
+ /*   let playlistEmbed = new MessageEmbed()
       .setTitle(`${playlist.title}`)
       .setDescription(songs.map((song, index) => `${index + 1}. ${song.title}`))
       .setURL(playlist.url)
       .setColor("#F8AA2A")
       .setTimestamp();
+      
+ 
+      
 
     if (playlistEmbed.description.length >= 2048)
       playlistEmbed.description =
         playlistEmbed.description.substr(0, 2007) + "\nPlaylist supérieure à la limite de caractères...";
+ */
 
-    message.channel.send(`${message.author} A lancé une playlist`, playlistEmbed);
+    message.channel.send(`${message.author} A lancé une playlist.\nPS : L'ancien système de playlist avec plus d'information lors du lancement ne fonctionne plus.\nA cause d'une mise à jour de la librairie\nl'ancien systeme revient le plus vite possible.`);
 
     if (!serverQueue) {
       message.client.queue.set(message.guild.id, queueConstruct);

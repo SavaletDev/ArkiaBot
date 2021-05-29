@@ -1,4 +1,4 @@
-const { prefix } = require('./config.json')
+const { PREFIX } = require('./config.json')
 var d = new Date();
 var hours = "[" + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + "] ";
 
@@ -11,7 +11,7 @@ module.exports = (client, aliases, callback) => {
         const { content } = message;
 
         aliases.forEach(alias => {
-            const command = `${prefix}${alias}`
+            const command = `${PREFIX}${alias}`
 
             if(content.startsWith(`${command} `) || content === command) {
                 console.log(hours + `Commande exécutée : ${command}`)

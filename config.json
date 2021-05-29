@@ -1,5 +1,10 @@
 {
-    "token": "YOUR_TOKEN",
-    "prefix": "-",
-    "redisPath": "YOUR_DB"
+  "TOKEN": "NzE2MzMzMTc0NzM2ODE0MjEz.XtKPQQ.jvtYGj8x9veHfBrqldPhStsEbdY",
+  "YOUTUBE_API_KEY": "AIzaSyD5VkvkRLKplEV7wCgfn3EmqXzNXztiU4E",
+  "SOUNDCLOUD_CLIENT_ID": "wemqLM56wkD5McvdTn2KaZmQgQ0FC8Jg",
+  "MAX_PLAYLIST_SIZE": 1000,
+  "PREFIX": "+",
+  "PRUNING": false,
+  "STAY_TIME": 0,
+  "DEFAULT_VOLUME": 100
 }

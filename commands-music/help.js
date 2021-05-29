@@ -8,7 +8,7 @@ module.exports = {
     let commands = message.client.commands.array();
 
     let helpEmbed = new MessageEmbed()
-      .setTitle(`${message.client.user.username} Bot Aide Musique`)
+      .setTitle(`${message.client.user.username}Bot Aide Musique`)
       .setColor("#2abef8");
 
       commands.forEach((cmd) => {
